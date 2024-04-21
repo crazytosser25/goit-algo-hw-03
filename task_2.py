@@ -14,7 +14,7 @@ def get_numbers_ticket(min: int, max: int, quantity: int) -> list:
     """
     try:
         # Generating list of random numbers
-        numbers = sample(range(min, (max+1)), quantity)
+        numbers: list = sample(range(min, (max+1)), quantity)
     except ValueError:
         # Returning error if quantity is lagger than range 
         return 'ValueError: Sample larger than population or is negative!!!'

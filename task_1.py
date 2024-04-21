@@ -12,14 +12,14 @@ def get_days_from_today(date: str) -> int:
     """
     # Converting string to datetime format, living only date
     try:
-        date = datetime.strptime(date, '%Y-%m-%d').date()
+        date: datetime = datetime.strptime(date, '%Y-%m-%d').date()
     # Returning error if string format is wrong
     except ValueError:
         return 'Date format must be "YYYY-MM-DD" only!!!'
     # Receiving today's date
-    today = datetime.today().date()
+    today: datetime = datetime.today().date()
     # Calculating difference between dates
-    difference = date - today
+    difference: datetime = date - today
     # Returning number of days
     return difference.days
 
