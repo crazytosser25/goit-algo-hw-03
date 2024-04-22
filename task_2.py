@@ -14,8 +14,9 @@ def get_numbers_ticket(min: int, max: int, quantity: int) -> list:
     """
     # Forming empty list for results
     numbers = list()
-    # Checking args
+    # Checking if min lower than max ant they are in range from 1 to 1000
     if 0 < min < max < 1000:
+        # Checking if there are enough values for quantity
         if quantity < (max - min + 1):
             # Generating list of random numbers
             numbers = sample(range(min, (max+1)), quantity)
